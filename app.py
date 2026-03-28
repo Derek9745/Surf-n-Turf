@@ -1,4 +1,8 @@
 from flask import Flask, render_template, request
+import pandas as pd
+import matplotlib as mp
+
+
 
 app = Flask(__name__)
 
@@ -11,6 +15,11 @@ def index():
         name = request.form.get("name")
         message = f"Hello, {name}!"
     return render_template("index.html", message=message)
+
+
+@app.route("/search", methods =["GET","POST"])
+def search():
+    return render_template("search.html")
 
 if __name__ == "__main__":
     app.run(debug=True)

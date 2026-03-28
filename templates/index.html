@@ -13,9 +13,13 @@
             <input type="text" name="name" placeholder="Enter your name" required>
             <button type="submit">Submit</button>
         </form>
-        {% if message %}
-            <p>{{ message }}</p>
-        {% endif %}
+    
     </div>
+
+     <script>
+        function search() {
+            document.getElementById("search").innerHTML = "Content changed!";
+        }
+    </script>
 </body>
 </html>
